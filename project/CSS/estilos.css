@@ -1,0 +1,523 @@
+:root {
+  --fondo-oscuro: #0f0f0f;
+  --Charcoal-Slate: #2c3c3c;
+  --Cognac-Brown:#8b5e3c;
+  --Ash-Silver:#b8b8b8;
+  --Bone-White: #f2f1ef;
+  --Brass-Gold: #c9a86b;
+  --Blanco: #ffffff;
+  --Gold-Variant : #c9a86b;
+  --Ash-Silver: #b8b8b8;
+  --Rojo : #dc3545; 
+ 
+}
+html{
+    scroll-behavior: smooth;
+
+}
+/* fonts */
+body {
+  font-family: "Noto Sans", sans-serif;
+  color: var(--Bone-White);
+  overflow-x: hidden;
+}
+/* Arreglo */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fondo-oscuro);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#login,
+#gestion {
+  flex: 1;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/SpaceGrotesk-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-Light.ttf");
+  font-weight: normal;
+}
+/* textos */
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", monospace;
+}
+h1 {
+  font-size: 50px;
+}
+
+header {
+  background-color: var(--fondo-oscuro);
+  padding: 20px 0;
+}
+header {
+  background-color: var(--fondo-oscuro);
+  padding: 20px 0;
+}
+
+header img {
+  height: 50px;
+}
+
+nav ul li a {
+  color: var(--Ash-Silver);
+  text-decoration: none;
+  border-left: 1px solid transparent;
+  padding-left: 10px;
+}
+
+nav ul li a:hover {
+  color: var(--Brass-Gold);
+  border-color: var(--Brass-Gold);
+}
+
+/* Banner */
+.banner {
+  background-image: url(../IMG/bannerBarberia.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*  */
+  height: 75vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 60px
+
+
+}
+.banner .btn {
+  margin-right: 10px;
+}
+.banner-content {
+  padding-bottom: 60px;
+  max-width: 600px;
+}
+.banner-content h1{
+ color: var(--Gold-Variant);
+ text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+ .banner-content p{
+  color: var(--Bone-White);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+ }
+
+/* Buttons */
+.btn{
+    text-decoration: none;
+    color: var(--Blanco); 
+}
+.btn a {
+    text-decoration: none;
+}
+.btn a{
+    text-decoration: none;
+    color: inherit;
+}
+.btn.btn-primary {
+  background-color: var(--fondo-oscuro);
+  border-color: var(--Brass-Gold);
+  border-radius: 0;
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--fondo-oscuro);
+  border-color: var(--Brass-Gold);
+}
+
+.btn.btn-outline-primary {
+  background-color: var(--fondo-oscuro);
+  border-color: var(--Brass-Gold);
+  border-radius: 0;
+ 
+}
+
+.btn.btn-outline-primary:hover {
+  background-color: var(--fondo-oscuro);
+  border-color: var(--Brass-Gold);
+  color: white;
+  
+}
+/* Seccion Sobre Nosotros */
+#home {
+  background-color: var(--fondo-oscuro);
+  padding: 70px ;
+}
+
+#home h3{
+    color : var(--Brass-Gold);
+}
+
+#home #textos{
+    padding: 0 70px;
+}
+#textos h2 , #textos h3{
+  margin-top: 20px;
+}
+#textos p{
+  margin-bottom: 20px;
+}
+/* Galería de trabajos */
+#trabajos {
+  background-color: var(--fondo-oscuro);
+  padding: 60px 0; 
+}
+#trabajos h2 {
+  color: var(--Brass-Gold);
+  font-family: "Space Grotesk", monospace;
+  letter-spacing: 2px;
+}
+#trabajos img{
+  border: 2px solid var(--Cognac-Brown);
+  transition: transform 0.3s ease;
+}
+#trabajos img:hover{
+  transform: scale(1.05);
+  border-color: var(--Brass-Gold);
+}
+
+/* Barberos */
+#barberos {
+  background-color: var(--fondo-oscuro);
+  padding: 70px;
+}
+
+.card-barbero{
+  transition: all 0.3s ease;
+}
+
+.barbero-box{
+  background-color: var(--fondo-oscuro);
+  border: 2px solid var(--Brass-Gold);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(15, 15,15,0.1);
+}
+.barbero-box p{
+  color: var(--Bone-White) !important;
+}
+.barbero-box img{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid var(--Cognac-Brown)
+}
+.card-barbero:hover {
+  border-color : var(--Brass-Gold);
+  box-shadow: 0 0 15px rgba(201, 168, 107, 0.6);
+}
+.card-barbero h3{
+  color: var(--Gold-Variant)
+}
+#babreros{
+  display: none !important;
+}
+/* Separador entre sections */
+.separador-linea{
+  width: 100%;
+  height: 1px;
+  background-color: var(--Charcoal-Slate);
+  margin: 40px 0;
+  opacity: 0.5;
+}
+.separador-degradado{
+  height: 40px;
+  background: linear-gradient(to right , transparent, var(--Cognac-Brown), transparent);
+  margin: 40px 0;
+}
+.separador-texto{
+  text-align: center;
+  font-family: "Space Grotesk", monospace;
+  color : var(--Brass-Gold);
+  margin: 40px;
+  letter-spacing: 3px;
+}
+.separador-bloque{
+  background-color: var(--fondo-oscuro);
+  padding: 20px ;
+}
+/* Servicios */
+#servicios {
+  background-color: var(--fondo-oscuro);
+  padding: 70px;
+  
+}
+.servicio-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: var(--fondo-oscuro);
+  border: 2px solid var(--Cognac-Brown);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(139, 94, 60, 0.15);
+  transition: all 0.3s ease;
+}
+
+.servicio-box:hover{
+  border-color: var(--Brass-Gold);
+  box-shadow: 0 0 25px rgba(201, 168, 107, 0.3);
+  transform: translateY(-4px);
+}
+.servicio-box h3{
+  font-family: "Space Grotesk", monospace;
+  color: var(--Gold-Variant);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.servicio-box p{
+  color: var(--Ash-Silver);
+  font-size: 16px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.servicio-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--Gold-Variant);
+  margin-bottom: 10px;
+}
+.card-servicio {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 0 0 300px;
+} 
+.servicios-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  overflow-x : auto;
+
+}
+/* Login */
+#login{
+  background-color: var(--fondo-oscuro);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+#cLogin{
+  background-color: var(--fondo-oscuro);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 350px;
+  color: var(--Brass-Gold);
+}
+#cLogin h1{
+  font-size: 1.8rem;
+  color: var(--Brass-Gold);
+}
+.form-label{
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.form-control{
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--fondo-oscuro);
+  color: var(--Ash-Silver);
+}
+.form-control:focus{
+  outline: none;
+  box-shadow: 0 0 5px var(--Brass-Gold);
+}
+.btn{
+  padding: 0.6rem;;
+  font-weight: bold;
+  border-radius: 6px;
+}
+/* Formulario Reserva */
+.formulario-reserva{
+  background-color: var(--fondo-oscuro);
+  color: var(--Bone-White);
+}
+.fomrulario-box{
+  max-width: 500px;
+  background-color: var(--fondo-oscuro);
+  padding: 20px;
+  border: 2px solid var(--Cognac-Brown);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(201 , 168 , 107 , 0.1);
+  box-sizing: border-box;
+}
+label{
+  font-weight: bold;
+  color: var(--Gold-Variant);
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select{
+  background-color: var(--Ash-Silver);
+  border:none;
+  border-radius: 8px;
+  padding :10px;
+  width: 100%;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select:focus{
+  outline: none;
+  box-shadow: 0 0 8px var(--Gold-Variant);
+}
+.btn-warming{
+  background-color: var(--Brass-Gold);
+  color : var(--fondo-oscuro);
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.btn-warming:hover{
+  background-color: var(--Gold-Variant);
+  
+}
+.reservah2 , h2{
+  color: var(--Brass-Gold);
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Contacto + mapa */
+#mapacontacto{
+  background-color: var(--fondo-oscuro);
+  color: var(--Bone-White)
+}
+#mapacontacto h2{
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--Brass-Gold);
+}
+.icono{
+  width: 24px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  vertical-align: middle;
+}
+#mapa{
+  border: 2px solid var(--Oscuro-Para-Mapa);
+  border-radius: 8px;
+}
+/* Gestion de reservas */
+#gestion{
+  background-color: var(--fondo-oscuro);
+  color: var(--fondo-oscuro);
+  min-height: 100vh;
+}
+#gestion h2{
+  color: var(--Brass-Gold);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.table thead th{
+  background-color: #f8f9fa;
+  color: var(--fondo-oscuro);
+  font-weight: 600;
+}
+.table td p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+/* Cerrar Sesión */
+#btnCerrarSesion {
+  transition: all 0.3s ease;
+}
+#btnCerrarSesion:hover {
+  background-color: var(--Rojo);
+  color: var(--Blanco);
+}
+/* Footer */
+#footer{
+  background-color: var(--fondo-oscuro);
+  color: var(--Ash-Silver);
+  padding: 30px 0;
+  font-size: 0.95rem;
+}
+.footer-logo{
+  height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+}
+.footer-link{
+  color: var(--Ash-Silver);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-link:hover{
+  color: var(--Brass-Gold);
+}
+
+/* Necesario porque se bugeaban los shadows y no mostraba la info que ponías */
+/* inputs */
+.input{
+  background-color: var(--Charcoal-Slate);
+  color: var(--Bone-White);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  transition: box-shadow 0.3 ease , transform 0.3s ease;
+  font-size: 1rem;
+  z-index: 1;
+}
+.input::placeholder{
+  color: var(--Ash-Silver);
+  opacity: 0.7;
+}
+.input:focus{
+  outline: none;
+  box-shadow: 0 0 10px rgba(201 , 168 , 107 , 0.6);
+  transform: scale(1.01);
+  z-index: 2;
+}
+.body{
+  background-color: var(--fondo-oscuro);
+}
+/* Aviso */
+#pResultado {
+  margin: 0;
+  padding: 10px;
+  color: var(--Brass-Gold);
+  font-weight: bold;
+}
+
+/* Separador visual */
+.separador{
+  width: 100%;
+  height: 2px;
+  background:linear-gradient(to right, transparent , var(--Brass-Gold) , transparent);
+  opacity: 0.5;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
